@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Your Marks</h1>
+<table>
+    <tr>
+        <th>Subject</th>
+        <th>Marks</th>
+    </tr>
+    {% for mark in marks %}
+    <tr>
+        <td>{{ mark.subject }}</td>
+        <td>{{ mark.marks }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<p><strong>Average Marks:</strong> {{ avg }}</p>
+<a href="/logout"><button>Logout</button></a>
+{% endblock %}
