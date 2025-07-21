@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Add Marks for {{ student.username }}</h1>
+<form method="POST">
+    <input type="text" name="subject1" placeholder="Subject 1" required><br>
+    <input type="number" name="marks1" placeholder="Marks 1" required><br>
+    
+    <input type="text" name="subject2" placeholder="Subject 2"><br>
+    <input type="number" name="marks2" placeholder="Marks 2"><br>
+    
+    <input type="text" name="subject3" placeholder="Subject 3"><br>
+    <input type="number" name="marks3" placeholder="Marks 3"><br>
+    
+    <input type="text" name="subject4" placeholder="Subject 4"><br>
+    <input type="number" name="marks4" placeholder="Marks 4"><br>
+
+    <button type="submit">Add Marks</button>
+</form>
+<a href="/admin_dashboard"><button>Back to Admin Dashboard</button></a>
+{% endblock %}
+
