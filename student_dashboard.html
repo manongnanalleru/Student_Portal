@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dashboard</title>
+    <style>
+        table {
+            width: 50%;
+            margin: auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center;">Welcome, {{ user.username }}</h1>
+    
+    <h2 style="text-align:center;">Your Marks</h2>
+    
+    <table>
+        <tr>
+            <th>Subject</th>
+            <th>Marks</th>
+        </tr>
+        {% for subject, marks in subject_marks %}
+        <tr>
+            <td>{{ subject }}</td>
+            <td>{{ marks }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <div style="text-align:center; margin-top:20px;">
+        <a href="/logout"><button>Logout</button></a>
+    </div>
+</body>
+</html>
