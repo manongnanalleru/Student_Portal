@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Admin Dashboard</h1>
+<h2>Students</h2>
+<table>
+    <tr>
+        <th>Student Name</th>
+        <th>Action</th>
+    </tr>
+    {% for student in students %}
+    <tr>
+        <td>{{ student.username }}</td>
+        <td><a href="/add_marks/{{ student.id }}"><button>Add Marks</button></a></td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="/logout"><button>Logout</button></a>
+{% endblock %}
